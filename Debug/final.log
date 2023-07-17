@@ -1,0 +1,4 @@
+﻿  final.cpp
+C:\Users\wwan\Downloads\RTR\finalShadow\final\final.cpp(596,45): warning C4244: '+=': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\wwan\Downloads\RTR\finalShadow\final\final.cpp(598,49): warning C4244: '-=': conversion from 'double' to 'GLfloat', possible loss of data
+  final.vcxproj -> C:\Users\wwan\Downloads\RTR\finalShadow\final\Debug\final.exe

@@ -1,0 +1,18 @@
+﻿#version 330 core
+out vec4 FragColor;
+
+#define NEAR_PLANE 3.0
+#define FAR_PLANE 8.0
+
+float getLinearizeDepth(float depth) {
+    float z = depth * 2.0 - 1.0; // Back to NDC
+    z =(2.0 * NEAR_PLANE * FAR_PLANE) / (FAR_PLANE + NEAR_PLANE - z * (FAR_PLANE - NEAR_PLANE));
+    return (z - NEAR_PLANE)/(FAR_PLANE - NEAR_PLANE);
+}
+
+void main()
+{
+    float depth = getLinearizeDepth(gl_FragCoord.z);
+    FragColor.r = depth;
+    FragColor.g = depth * depth;
+}
